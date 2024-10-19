@@ -17,7 +17,7 @@ console.log(`I added another item so now I should have ${basket.join(' and ')} i
 
 function currentBasket(){
 console.log(`My basket has ${basket.join(' and ')} in it.`);
- }//Practice function. Doesn't console properly for empty function
+ }//GT Practice function. Doesn't console the way I want for everything.
 
 addItem('fruit');
 currentBasket();
@@ -36,14 +36,14 @@ function empty(){
 
 console.log('Is this basket empty?', empty());
 
-addItem('bread');
-addItem('soda');
+// addItem('bread');
+ addItem('soda');
 currentBasket();
 listItems();
 
 addItem('eggs');
 addItem('yogurt');
-//addItem('bacon')
+addItem('bacon')
 //addItem('juice');
 currentBasket();
 listItems();
@@ -60,10 +60,19 @@ function isFull(){
 
 console.log(isFull());
 
+function addItem(item){
+    if (isFull())
+    return false;
+    else basket.push(item);
+    return true};
+//end addItem update
+
+console.log(addItem('pizza'));
 
 
-
-
+console.log(addItem('peanuts'));
+currentBasket();
+listItems();
 
 
 // DO NOT MODIFY
