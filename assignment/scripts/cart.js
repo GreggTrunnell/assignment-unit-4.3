@@ -27,18 +27,41 @@ function listItems(){
         console.log(basket[items]);
 }//end of listItems
 
-console.log(listItems());
+listItems();
 
 function empty(){
     basket.splice(0,basket.length);
+    return true;
 }//end of empty
 
 console.log('Is this basket empty?', empty());
 
-addItem('bread')
+addItem('bread');
 addItem('soda');
-console.log(basket);
 currentBasket();
+listItems();
+
+addItem('eggs');
+addItem('yogurt');
+//addItem('bacon')
+//addItem('juice');
+currentBasket();
+listItems();
+
+
+const maxItems=5;
+
+function isFull(){
+    if (basket.length >=5)
+        return true;
+    else (basket.length < 5) 
+        return false;
+}//end isFull
+
+console.log(isFull());
+
+
+
 
 
 
