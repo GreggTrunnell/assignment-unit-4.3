@@ -7,16 +7,17 @@ let basket=[];
 function addItem(item){
     basket.push(item);
     return true;
-}
+}//end of addItem
+
 console.log(`Basket is ${basket}`);
 console.log('Added apples ', addItem('apples'));
 console.log(`Basket now has ${basket.join(' and ')} in it.`);
 console.log('Added milk',addItem('milk'))
 console.log(`I added another item so now I should have ${basket.join(' and ')} in it.`)
-function currentBasket(){
-    console.log(`My basket has ${basket.join(' and ')} in it.`);
-}
 
+function currentBasket(){
+console.log(`My basket has ${basket.join(' and ')} in it.`);
+ }//Practice function. Doesn't console properly for empty function
 
 addItem('fruit');
 currentBasket();
@@ -24,18 +25,23 @@ currentBasket();
 function listItems(){
     for (let items = 0; items < basket.length; items++)
         console.log(basket[items]);
-    }
+}//end of listItems
+
 console.log(listItems());
 
 function empty(){
     basket.splice(0,basket.length);
-}
+}//end of empty
+
 console.log('Is this basket empty?', empty());
 
 addItem('bread')
 addItem('soda');
 console.log(basket);
 currentBasket();
+
+
+
 
 // DO NOT MODIFY
 // Used for automated testing
